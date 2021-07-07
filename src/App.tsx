@@ -15,9 +15,9 @@ const App: React.FC<Props>=(props)=>{
       <div className="font-sans">
     
       <Nav />
-      <Header />
+      <Header /><ConfirmationDialog  description="Do you really want to delete these records? This process cannot be undone."/>
+     
      <HeroSection/>
-     <ConfirmationDialog  description="Do you really want to delete these records? This process cannot be undone."/>
         </div>
     );
 };
