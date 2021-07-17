@@ -1,19 +1,33 @@
 import React from "react";
 import GettingStartedBlocks from "./GettingStartedBlocks";
 
-interface Props {}
+interface Props {
+  H1: string;
+  description: string;
+  children: React.ReactElement[];
+}
 
-const GettingStarted: React.FC<Props> = (props) => {
+const GettingStarted: React.FC<Props> = ({H1, description, children}) => {
+  // console.log(children);
+
+  children.forEach((c) => {
+    if (c.type !== GettingStartedBlocks) {
+      // eslint-disable-next-line no-throw-literal
+      throw "Children of tablist should be gettingstartedblock. received " + c.type;
+    }
+  });
+
   return (
     <div>
       <div className="text-center px-3 pb-10">
         <h2 className="font-semibold pt-14 md:text-2xl">
-          Getting started is easy
+       
+          {H1}
         </h2>
         <p className="text-sm pt-3">
-          Earn Stars and get rewarded in a few easy steps.
+         {description}
         </p>
-        <div className="lg:flex">
+        <div className="lg:flex ">
           <div
             className="
               md:flex
@@ -21,67 +35,37 @@ const GettingStarted: React.FC<Props> = (props) => {
               md:max-w-80
               2xl:max-w-60
               md:m-auto md:items-baseline
-              space-y-6
+              space-y-10
             "
           >
-            <GettingStartedBlocks
-              imgURL="./img/1.png"
-              heading="Download the Starbucks app"
-              headingLarge="Create an account"
-              alt="1"
-            >
-              <p className="text-sm md:pt-6">
-                <a
-                  href="https://starbucks.app.link/VLa2I3inh9"
-                  className="text-primary-300 underline hover:no-underline"
-                >
-                  Join in the app{" "}
-                </a>
-                to get access to the full range of Starbucks Rewards benefits.
-                You can also
-                <a
-                  href="www"
-                  className="text-primary-300 underline hover:no-underline"
-                >
-                  {" "}
-                  join online
-                </a>
-                .
-              </p>
-            </GettingStartedBlocks>
+          
+                {children.map((child) => (
+                    <div className="flex md:flex-col flex-1 md:py-0 ">
+                      
+          <div className="md:m-auto">
+        
+                <img src={child.props.img} alt={child.props.alt} className="md:h-10 md:w-10" />
+              </div>
+              <div className="text-left px-2 md:text-center">
+                <h2 className="font-semibold md:hidden">
+                 {child.props.heading}
+                </h2>
+                <h2 className="font-semibold hidden md:block pt-4">
+                 {child.props.headingLarge}
+                </h2>
+              
+      
+              {child }
+              </div>
+            </div>
+))}
+            </div>
 
-            <GettingStartedBlocks
-              imgURL="./img/2.png"
-              heading="
-              Order and pay how you’d like"
-              alt="2"
-            >
-          <p className="text-sm md:pt-6">
-                  Use cash, credit/debit card or save some time and pay right
-                  through the app. You will collect Stars all ways.
-                  <a
-                    href="www"
-                    className="text-primary-300 underline hover:no-underline"
-                    >Learn how</a
-                  >
-                </p>
-            </GettingStartedBlocks>
-
-            <GettingStartedBlocks
-              imgURL="./img/3.png"
-              heading="Earn Stars, get Rewards"
-              alt="3"
-            >
-        <p className="text-sm md:pt-6">
-                  As you earn Stars, you can redeem them for Rewards-like free
-                  food, drinks, and more. Start redeeming with as little as 25
-                  Stars!
-                </p>
-            </GettingStartedBlocks>
+         
           </div>
         </div>
       </div>
-    </div>
+ 
   );
 };
 GettingStarted.defaultProps = {};
