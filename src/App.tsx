@@ -28,50 +28,50 @@ const App: React.FC<Props> = (props) => {
           heading={"Download the Starbucks app"}
           headingLarge={"Create an account in an easy way"}
         >
-        <p className="text-sm md:pt-6">
-                <a
-                  href="https://starbucks.app.link/VLa2I3inh9"
-                  className="text-primary-300 underline hover:no-underline"
-                >
-                  Join in the app{" "}
-                </a>
-                to get access to the full range of Starbucks Rewards benefits.
-                You can also
-                <a
-                  href="www"
-                  className="text-primary-300 underline hover:no-underline"
-                >
-                  {" "}
-                  join online
-                </a>
-                .
-              </p> 
+          <p className="text-sm md:pt-6">
+            <a
+              href="https://starbucks.app.link/VLa2I3inh9"
+              className="text-primary-300 underline hover:no-underline"
+            >
+              Join in the app{" "}
+            </a>
+            to get access to the full range of Starbucks Rewards benefits. You
+            can also
+            <a
+              href="www"
+              className="text-primary-300 underline hover:no-underline"
+            >
+              {" "}
+              join online
+            </a>
+            .
+          </p>
         </GettingStartedBlocks>
         <GettingStartedBlocks
           img={"./img/2.png"}
           alt={"2"}
           heading={"Order and pay how you’d like"}
         >
-    <p className="text-sm md:pt-6">
-                  Use cash, credit/debit card or save some time and pay right
-                  through the app. You will collect Stars all ways.
-                  <a
-                    href="www"
-                    className="text-primary-300 underline hover:no-underline"
-                    >Learn how</a
-                  >
-                </p>
+          <p className="text-sm md:pt-6">
+            Use cash, credit/debit card or save some time and pay right through
+            the app. You will collect Stars all ways.
+            <a
+              href="www"
+              className="text-primary-300 underline hover:no-underline"
+            >
+              Learn how
+            </a>
+          </p>
         </GettingStartedBlocks>
         <GettingStartedBlocks
           img={"./img/3.png"}
           alt={"3"}
           heading={"Earn Stars, get Rewards"}
         >
-     <p className="text-sm md:pt-6">
-                  As you earn Stars, you can redeem them for Rewards-like free
-                  food, drinks, and more. Start redeeming with as little as 25
-                  Stars!
-                </p>
+          <p className="text-sm md:pt-6">
+            As you earn Stars, you can redeem them for Rewards-like free food,
+            drinks, and more. Start redeeming with as little as 25 Stars!
+          </p>
         </GettingStartedBlocks>
       </GettingStarted>
 
@@ -145,6 +145,69 @@ const App: React.FC<Props> = (props) => {
           />{" "}
         </Tab>
       </Tabs>
+      <div className="absolute mt-96">
+        <GettingStarted
+          H1="Endless Extras"
+          description="Joining Starbucks® Rewards means unlocking access to exclusive benefits. Say hello to easy ordering, tasty Rewards and—yes, free coffee.
+        "
+        >
+          <GettingStartedBlocks
+            img={
+              "https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
+            }
+            alt={"fun-freebies"}
+            heading={"Fun freebies"}
+          >
+            <p className="text-sm md:pt-6">
+              Not only can you earn free coffee, look forward to a birthday
+              treat plus coffee and tea refills.
+            </p>
+            <a
+              href="https://starbucks.app.link/VLa2I3inh9"
+              className="text-primary-300 underline hover:no-underline"
+            >
+              Learn More{" "}
+            </a>
+          </GettingStartedBlocks>
+          <GettingStartedBlocks
+            img={
+              "https://www.starbucks.com/weblx/images/rewards/benefits/2-order-and-pay-ahead.jpg"
+            }
+            alt={"2"}
+            heading={"Order & pay ahead          "}
+          >
+            <p className="text-sm md:pt-6">
+              Enjoy the convenience of in-store, curbside or drive-thru pickup
+              at select stores.
+            </p>
+            <a
+              href="www"
+              className="text-primary-300 underline hover:no-underline"
+            >
+              Learn more
+            </a>
+          </GettingStartedBlocks>
+          <GettingStartedBlocks
+            img={
+              "https://www.starbucks.com/weblx/images/rewards/benefits/3-get-to-free-faster.jpg"
+            }
+            alt={"3"}
+            heading={"Get to free faster"}
+          >
+            <p className="text-sm md:pt-6">
+              Earn Stars even quicker with Bonus Star challenges, Double Star
+              Days and exciting games
+            </p>
+
+            <a
+              href="www"
+              className="text-primary-300 underline hover:no-underline"
+            >
+              Learn more
+            </a>
+          </GettingStartedBlocks>
+        </GettingStarted>
+      </div>
     </div>
   );
 };
