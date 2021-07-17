@@ -8,9 +8,12 @@ interface Props {}
 const Nav:React.FC<Props>=(props)=> {
   const[isMenuOpen, setIsMenuOpen]= useState(false);
   const[isAnimating, setIsAnimating]= useState(false);
+
+  const navWidth= isMenuOpen ? "calc(100% + 17px)" : "100%";
   return (
     <>
-    <div className="relative flex z-30 justify-between px-4 py-2 bg-white shadow-md ">
+    <div className="relative flex z-30 justify-between px-4 py-2 bg-white shadow-md "
+    style={{ width: navWidth }}>
       <svg
 
         className="w-9 h-9"

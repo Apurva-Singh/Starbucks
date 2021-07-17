@@ -1,14 +1,23 @@
 import React, {Fragment, useState} from "react";
 import {Transition} from '@headlessui/react';
+import Tab from './Tab';
 
 interface Props{
- children: React.ReactElement[];
+ children:  React.ReactElement[]; 
+ initialActiveTab?: number;
 }
 
-const Tabs: React.FC<Props>=({children})=>{
-    const [selectedIndex, setSelectedIndex]= useState(0);
+const Tabs: React.FC<Props>=({children, initialActiveTab})=>{
+    const [selectedIndex, setSelectedIndex]= useState(initialActiveTab!);
 
     const tabWidth= 100 / children.length;
+
+    children.forEach((c)=>{
+        if(c.type !== Tab){
+            throw "Children of tablist should be tab, received "+ c.type;
+        }
+    });
+
     return(
        
              <div>
@@ -16,9 +25,10 @@ const Tabs: React.FC<Props>=({children})=>{
              <div className="relative max-w-md mx-auto ">
                  <div className="flex text-xl font-bold ">
                  {children.map((child, index)=>(
-                   <div className="flex-1 px-2 py-4 text-center cursor-pointer" onClick={()=> setSelectedIndex(index)}>
+                   <div className="flex-1 px-2 py-4 text-center cursor-pointer" 
+                   onClick={()=> setSelectedIndex(index)}>
                    {child.props.title}
-                   <span className="text-gold text-xs">★</span> 
+                  
                </div>
                  ))}
                  </div>
@@ -37,6 +47,7 @@ const Tabs: React.FC<Props>=({children})=>{
              {children.map((child,index)=>(
                 <Transition as={Fragment}
                 show={index=== selectedIndex}
+                unmount={false}
                 enter="transition-opacity duration-300" 
                 enterFrom="opacity-0"
                 enterTo="opacity-100" 

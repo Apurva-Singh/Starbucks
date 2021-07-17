@@ -13,7 +13,7 @@ const RoundedLink:React.FC<Props>=({theme, ...rest})=> {
     <a
     {...rest}
       className={
-        "border font-semibold  rounded-full flex-shrink-0 px-4 py-2 tracking-wide " +
+        "border font-semibold rounded-full flex-shrink-0 px-4 py-1 tracking-wide " +
         themeClasses
       }
   

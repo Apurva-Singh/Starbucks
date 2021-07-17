@@ -7,7 +7,7 @@ interface Props{
 
 const Header: React.FC<Props>=(props)=>{
     return(
-        <div className="flex sticky top-0 justify-between bg-primary-400 px-4 py-2 items-center">
+        <div className="flex sticky top-0 justify-between h-14 bg-primary-400 px-4 py-2 items-center">
       <p className="text-13 font-bold text-white">
         STARBUCKS® REWARDS
       </p>
