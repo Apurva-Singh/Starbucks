@@ -1,7 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  // mode:"jit",
+  mode:"jit",
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -18,6 +18,8 @@ module.exports = {
       black: colors.black,
       red: colors.red,
       gold: colors.gold,
+      transparent: colors.transparent,
+      blue: colors.blue,
     },
     fontFamily: {
       sans: "'Helvetica Neue',Helvetica,Arial,sans-serif",

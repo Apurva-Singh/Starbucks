@@ -7,6 +7,7 @@ import RewardsTabContent from "./RewardsTabContent";
 import Tab from "./Tab";
 import Tabs from "./Tabs";
 import GettingStartedBlocks from "./GettingStartedBlocks";
+import StarCodes from "./StarCodes";
 
 interface Props {}
 
@@ -15,7 +16,7 @@ const App: React.FC<Props> = (props) => {
     <div className="font-sans">
       <Nav />
       <Header />
-
+      
       <HeroSection />
 
       <GettingStarted
@@ -23,7 +24,7 @@ const App: React.FC<Props> = (props) => {
         description="Earn Stars and get rewarded in a few easy steps."
       >
         <GettingStartedBlocks
-          img={"./img/1.png"}
+          img={"https://www.starbucks.com/weblx/images/rewards/getting-started/getting-started-1@2x.jpg"}
           alt={"1"}
           heading={"Download the Starbucks app"}
           headingLarge={"Create an account in an easy way"}
@@ -48,7 +49,7 @@ const App: React.FC<Props> = (props) => {
           </p>
         </GettingStartedBlocks>
         <GettingStartedBlocks
-          img={"./img/2.png"}
+          img={"https://www.starbucks.com/weblx/images/rewards/getting-started/getting-started-2@2x.jpg"}
           alt={"2"}
           heading={"Order and pay how you’d like"}
         >
@@ -64,7 +65,7 @@ const App: React.FC<Props> = (props) => {
           </p>
         </GettingStartedBlocks>
         <GettingStartedBlocks
-          img={"./img/3.png"}
+          img={"https://www.starbucks.com/weblx/images/rewards/getting-started/getting-started-3@2x.jpg"}
           alt={"3"}
           heading={"Earn Stars, get Rewards"}
         >
@@ -145,7 +146,7 @@ const App: React.FC<Props> = (props) => {
           />{" "}
         </Tab>
       </Tabs>
-      <div className="absolute mt-96">
+      <div className=" mt-96">
         <GettingStarted
           H1="Endless Extras"
           description="Joining Starbucks® Rewards means unlocking access to exclusive benefits. Say hello to easy ordering, tasty Rewards and—yes, free coffee.
@@ -207,7 +208,13 @@ const App: React.FC<Props> = (props) => {
             </a>
           </GettingStartedBlocks>
         </GettingStarted>
+
+
       </div>
+
+      <StarCodes />
+      
+      
     </div>
   );
 };
