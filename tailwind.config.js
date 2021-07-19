@@ -11,7 +11,9 @@ module.exports = {
         200: "#d4e9e2",
         300: "#008248",
         400: "#1e3932",
+
       },
+      naturalGray: "#f7f7f7",
       secondary: "#f3f1e7",
       gray: colors.gray,
       white: colors.white,

@@ -12,7 +12,7 @@ const StarCodes: React.FC<Props> = (props) => {
         getFieldProps,
         touched,
         errors,
-        isValid,
+        // isValid,
       } = useFormik({
         initialValues: {
             starcodes: "",
